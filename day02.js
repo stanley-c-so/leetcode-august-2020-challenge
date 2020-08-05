@@ -113,7 +113,7 @@ const highestTest = 0 || Infinity;
 
 // Test case 1
 input = {
-  commands: ['add', 'add', 'contains', 'contains', 'add', 'contains', 'remove', 'contains'],
+  commands: [ 'add', 'add', 'contains', 'contains', 'add', 'contains', 'remove', 'contains' ],
   inputs: [ [1], [2], [1], [3], [2], [2], [2], [2] ],
 };
 expected = [ undefined, undefined, true, false, undefined, true, undefined, false ];  // in leetcode, the output shows up as `null` instead of `undefined` for methods that have no return
