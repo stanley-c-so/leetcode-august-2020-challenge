@@ -53,7 +53,10 @@ function solution_1 (root, sum) {
   return paths;
 }
 
-const pathSum = solution_1;
+// one-liner - basically the above
+solution_2=(r,s,p=0,D=(n,d={},N={})=>{for(t of Object.keys(d)){x=+t+n.val;if(!N[x])N[x]=0;N[x]+=d[t]}N[n.val]=N[n.val]+1||1;p+=N[s]||0;if(n.left)D(n.left,{...N});if(n.right)D(n.right,{...N})})=>r?D(r)|p:0
+
+const pathSum = solution_2;
 
 // const specialTest = (...args) => {
 // };
