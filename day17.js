@@ -55,6 +55,9 @@ function solution_1 (candies, num_people) {
 // one-liner - basically the above
 solution_2=(c,p)=>eval(`o=Array(p).fill(0);i=0;n=1;while(c){a=n<c?n:c;o[i]+=a;c-=a;i=(i+1)%p;++n}o`)
 
+// alex mok's one-liner
+solution_3=(c,n,a=Array(n).fill(i=0))=>eval(`while((c-=i)>0)a[i%n]+=c>++i?i:c,a`)
+
 const distributeCandies = solution_2;
 
 // const specialTest = (...args) => {
