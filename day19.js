@@ -49,7 +49,13 @@ function solution_1 (S) {
 // one-liner - basically the above
 solution_2=S=>S.split` `.map((w,i)=>('aeiouAEIOU'.includes(w[0])?w:w.slice(1)+w[0])+'ma'+'a'.repeat(i+1)).join` `
 
-const toGoatLatin = solution_2;
+// thomas luo's one-liner - only things noteworthy are the `z=w[0]` trick to avoid referring to `w[0]` again, and `'m'+'a'.repeat(i+2)` to save another character
+solution_3=S=>S.split(' ').map((w,i)=>('aeiouAEIOU'.includes(z=w[0])?w:w.slice(1)+z)+'m'+'a'.repeat(i+2)).join(' ')
+
+// combination of our one-liners
+solution_4=S=>S.split` `.map((w,i)=>('aeiouAEIOU'.includes(x=w[0])?w:w.slice(1)+x)+'m'+'a'.repeat(i+2)).join` `
+
+const toGoatLatin = solution_4;
 
 // const specialTest = (...args) => {
 // };
