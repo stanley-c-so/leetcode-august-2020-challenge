@@ -55,7 +55,10 @@ solution_3=S=>S.split(' ').map((w,i)=>('aeiouAEIOU'.includes(z=w[0])?w:w.slice(1
 // combination of our one-liners
 solution_4=S=>S.split` `.map((w,i)=>('aeiouAEIOU'.includes(x=w[0])?w:w.slice(1)+x)+'m'+'a'.repeat(i+2)).join` `
 
-const toGoatLatin = solution_4;
+// alex mok's one-liner - uses regex to check if the word begins with a vowel, but otherwise the solution is the same
+solution_5=S=>S.split` `.map((w,i)=>(/^[aeiou]/i.test(w)?w:w.slice(1)+w[0])+'m'+'a'.repeat(i+2)).join` `
+
+const toGoatLatin = solution_5;
 
 // const specialTest = (...args) => {
 // };
