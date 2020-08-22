@@ -44,7 +44,10 @@ function solution_2 (A) {
 // one-liner - based on reduce. time complexity is bad because we are recreating the array each time
 solution_3=A=>A.reduce((o,n)=>n%2?[...o,n]:[n,...o],[])
 
-const sortArrayByParity = solution_3;
+// alex mok's one-liner - sort
+solution_4=A=>A.sort((a,b)=>a%2-b%2)
+
+const sortArrayByParity = solution_4;
 
 const specialTest = A => {
   const output = sortArrayByParity(A);
