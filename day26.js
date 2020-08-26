@@ -58,7 +58,7 @@ function solution_2 (n) {
 }
 
 // one-liner - basically solution 1
-solution_3=(n,o=[])=>eval(`for(i=1;i<=n;++i)o.push(i%3&&i%5?i+'':i%3?'Buzz':i%5?'Fizz':'FizzBuzz');o`)
+solution_3=n=>eval(`o=[];for(i=1;i<=n;++i)o.push(i%3&&i%5?i+'':i%3?'Buzz':i%5?'Fizz':'FizzBuzz');o`)
 
 const fizzBuzz = solution_3;
 
