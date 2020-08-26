@@ -60,7 +60,10 @@ function solution_2 (n) {
 // one-liner - basically solution 1
 solution_3=n=>eval(`o=[];for(i=1;i<=n;++i)o.push(i%3&&i%5?i+'':i%3?'Buzz':i%5?'Fizz':'FizzBuzz');o`)
 
-const fizzBuzz = solution_3;
+// thomas luo's one-liner - if divisible by 3 and 5, then that's the same as testing for divisibility by 15. also, he saves 'Fizz' and 'Buzz' into variables to compose 'FizzBuzz' later.
+solution_4=n=>eval(`o=[];for(i=1;i<=n;++i)o.push(i%15?i%3?i%5?i+'':z='Buzz':y='Fizz':y+z);o`)
+
+const fizzBuzz = solution_4;
 
 // const specialTest = (...args) => {
 // };
