@@ -63,6 +63,9 @@ solution_3=n=>eval(`o=[];for(i=1;i<=n;++i)o.push(i%3&&i%5?i+'':i%3?'Buzz':i%5?'F
 // thomas luo's one-liner - if divisible by 3 and 5, then that's the same as testing for divisibility by 15. also, he saves 'Fizz' and 'Buzz' into variables to compose 'FizzBuzz' later.
 solution_4=n=>eval(`o=[];for(i=1;i<=n;++i)o.push(i%15?i%3?i%5?i+'':z='Buzz':y='Fizz':y+z);o`)
 
+// alex mok's one-liner - he creates the `n` length array first from 0 to `n - 1` and then maps those indices to the appropriate result
+solution_5=n=>[...Array(n).keys()].map(i=>++i%15?i%3?i%5?i+'':z='Buzz':y='Fizz':y+z)
+
 const fizzBuzz = solution_4;
 
 // const specialTest = (...args) => {
