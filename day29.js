@@ -76,8 +76,7 @@ function solution_1 (A) {
   // ITERATION
   for (let i = A.length - 1; i >= 0; --i) {
     const n = i + 1;                                        // `n` is the number that should live in current position
-    if (A[i] === n) continue;                               // if `A[i] === n` then this number is correctly sorted
-    flip(n);
+    if (A[i] !== n) flip(n);                                // if `A[i] === n` then this number is correctly sorted
   }
 
   return output;
